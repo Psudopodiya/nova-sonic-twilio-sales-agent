@@ -1,0 +1,21 @@
+# .env (create this file)
+PORT=3000
+
+# TWILLIO FREE TRIAL CREDS
+TWILIO_ACCOUNT_SID=
+TWILIO_AUTH_TOKEN=
+TWILIO_PHONE_NUMBER=
+
+# AWS CREDS
+AWS_REGION=us-east-1
+aws_access_key_id=
+aws_secret_access_key=
+aws_session_token=
+
+#ngrok
+PUBLIC_HOST= to 3000 redirect
+WEBSOCKET_URL= to 8000 redirect
+
+#CALL CONFIGS
+MAX_CONVO_SECS=5
+

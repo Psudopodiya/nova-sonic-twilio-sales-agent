@@ -1,0 +1,13 @@
+version: "2"
+authtoken: 32DXjsncjxj7YeoCNyVCXaNPRI0_61BEYk6brBQDXq2uQfr3Q
+
+tunnels:
+  flask:
+    proto: http
+    addr: 3000
+    # This will handle the Flask app for webhooks
+  websocket:
+    proto: http
+    addr: 8080
+    # This will handle WebSocket connections
+    # Note: ngrok automatically upgrades HTTP to WebSocket when needed

@@ -1,0 +1,16 @@
+Distribution / packaging
+.Python
+build/
+dist/
+
+Unit test / coverage reports
+htmlcov/
+
+Flask stuff:
+instance/
+.webassets-cache
+
+Environments
+.env
+.venv
+env/

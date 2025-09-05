@@ -1,0 +1,8 @@
+# requirements.txt
+flask == 2.3.3
+twilio == 8.10.0
+boto3 == 1.34.0
+python-dotenv == 1.0.0
+websockets == 11.0.3
+asyncio~=3.4.3
+aws_sdk_bedrock_runtime~=0.0.2
