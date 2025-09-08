@@ -1,0 +1,80 @@
+version: '3.8'
+
+services:
+  nova-sonic-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.optimized
+    container_name: nova_sonic_optimized
+    ports:
+      - "7860:7860"
+    environment:
+      - PORT=7860
+      - PUBLIC_HOST=${PUBLIC_HOST}
+      - USE_HTTPS=${USE_HTTPS:-false}
+      - TWILIO_ACCOUNT_SID=${TWILIO_ACCOUNT_SID}
+      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
+      - TWILIO_PHONE_NUMBER=${TWILIO_PHONE_NUMBER}
+      - AWS_REGION=${AWS_REGION}
+      - aws_access_key_id=${aws_access_key_id}
+      - aws_secret_access_key=${aws_secret_access_key}
+      - aws_session_token=${aws_session_token}
+      - MAX_CONVO_SECS=${MAX_CONVO_SECS:-600}
+      - TURN_SILENCE_MS=${TURN_SILENCE_MS:-700}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    volumes:
+      - ./system_prompt.txt:/app/system_prompt.txt:ro
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - nova-network
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '1'
+          memory: 1G
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Optional: Redis for distributed state management
+  redis:
+    image: redis:7-alpine
+    container_name: nova_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - nova-network
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+
+  # Optional: Prometheus for metrics
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: nova_prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    networks:
+      - nova-network
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    restart: unless-stopped
+
+networks:
+  nova-network:
+    driver: bridge
+
+volumes:
+  redis-data:
+  prometheus-data:

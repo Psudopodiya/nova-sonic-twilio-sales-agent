@@ -1,0 +1,84 @@
+# Python 3.12.6 Compatible Requirements
+# Optimized for low-latency voice AI system
+
+# Core Web Framework
+fastapi==0.115.5
+uvicorn[cl]==0.35.0
+websockets==14.2
+python-multipart==0.0.20
+starlette==0.41.3
+
+# Twilio Integration
+twilio==9.5.1
+
+# AWS Bedrock & Nova Sonic
+boto3==1.35.84
+botocore==1.35.84
+
+# AWS SDK for Bedrock Runtime (Nova Sonic)
+# Note: These may need manual installation if not on PyPI
+aws-sdk-bedrock-runtime==0.0.2
+smithy-aws-core==0.0.3
+smithy-core==0.0.2
+smithy-http==0.0.1
+smithy-json==0.0.1
+
+# Audio Processing
+numpy==2.2.0
+scipy==1.14.1
+soundfile==0.12.1
+
+# For VAD (Voice Activity Detection) - Alternative to Silero
+webrtcvad==2.0.10  # Simpler VAD that works with Python 3.12
+
+# Async & Performance
+aiohttp==3.11.10
+aiodns==3.2.0
+aiofiles==24.1.0
+
+# Logging & Monitoring
+loguru==0.7.3
+
+# Environment & Configuration
+python-dotenv==1.0.1
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# JSON & Serialization
+orjson==3.10.12
+ujson==5.10.0
+
+# HTTP & Networking
+httpx==0.28.1
+httpcore==1.0.7
+certifi==2024.12.14
+charset-normalizer==3.4.1
+idna==3.10
+urllib3==2.3.0
+
+# AWS Dependencies
+jmespath==1.0.1
+python-dateutil==2.9.0.post0
+s3transfer==0.10.3
+six==1.17.0
+
+# Type hints and validation
+typing-extensions==4.12.2
+annotated-types==0.7.0
+pydantic-core==2.27.2
+
+# Async support
+anyio==4.8.0
+sniffio==1.3.1
+
+# Click for CLI
+click==8.1.8
+
+# For production deployment
+gunicorn==23.0.0
+
+# Optional: Development tools
+# pytest==8.3.4
+# pytest-asyncio==0.25.0
+# black==25.1.0
+# isort==5.14.0

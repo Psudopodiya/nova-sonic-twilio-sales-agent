@@ -14,3 +14,7 @@ Environments
 .env
 .venv
 env/
+warp_env/
+
+Cache
+__pycache__/

@@ -1,0 +1,148 @@
+{
+  "company": {
+    "name": "ConsultAdd",
+    "description": "AWS Advanced Partner",
+    "agent_name": "Alex",
+    "agent_title": "Solutions Consultant"
+  },
+  
+  "services": {
+    "migration_modernization": {
+      "name": "Migration & Modernization",
+      "details": "Landing Zone/Control Tower, multi-account setup, App Migration Service (MGN), DMS/SCT, re-platform to EKS/ECS/Fargate, serverless (Lambda, API Gateway, Step Functions), containerization & microservices"
+    },
+    "data_analytics": {
+      "name": "Data & Analytics",
+      "details": "S3 data lake, Glue, Lake Formation, EMR, Redshift, Athena, OpenSearch, governance & lineage"
+    },
+    "ai_ml": {
+      "name": "AI/ML & GenAI",
+      "details": "Amazon Bedrock, SageMaker, retrieval (Kendra/OpenSearch), contact center AI (Amazon Connect), copilots & automation"
+    },
+    "devops": {
+      "name": "DevOps/Platform",
+      "details": "IaC, CI/CD, observability (CloudWatch, X-Ray), platform guardrails, GitOps"
+    },
+    "security": {
+      "name": "Security & Compliance",
+      "details": "IAM/KMS, WAF/Shield, detective controls, compliance gaps remediation (HIPAA/PCI/SOC2)"
+    },
+    "cost_optimization": {
+      "name": "FinOps / Cost Optimization",
+      "details": "CUR/Cost Explorer review, right-sizing, Savings Plans/RI strategy, storage lifecycle, monthly cost hygiene"
+    },
+    "edge_reliability": {
+      "name": "Edge & Reliability",
+      "details": "CloudFront, multi-AZ/DR, backup/restore, resilience testing"
+    }
+  },
+  
+  "opening_lines": {
+    "universal": "Hi, is this {prospect_name}? Hey {prospect_name}, it's {agent_name} from {company_name}. I know I'm calling out of the blue here. Do you have 20 seconds for me to tell you why I'm calling, then you can decide if we should talk?",
+    "technical": "Hi {prospect_name}, {agent_name} from {company_name}. We work with engineering teams on AWS. Quick question - are you folks running workloads on AWS today?",
+    "cost_focused": "Hi {prospect_name}, {agent_name} here from {company_name}. I'm calling because we just helped {similar_company} cut their AWS bill by 40%. Worth a quick chat to see if I could do the same for you?",
+    "compliance": "Hi {prospect_name}, {agent_name} from {company_name}. Reaching out because of the new compliance requirements hitting your industry. Got 30 seconds?"
+  },
+  
+  "discovery_questions": [
+    "First, can I ask - are you the person who handles cloud infrastructure decisions?",
+    "What are you using today for your cloud infrastructure?",
+    "How's that working out for you?",
+    "What's the biggest challenge you're facing with your current setup?",
+    "How long has this been a problem?",
+    "What have you tried to fix it so far?",
+    "If you don't mind me asking, what's this problem costing you - in time or money?",
+    "On a scale of 1-10, how much of a priority is fixing this?",
+    "What's your process for evaluating new solutions?",
+    "Besides yourself, who else would need to be involved?",
+    "What's your timeline for making changes?",
+    "What would need to happen for you to consider switching providers?"
+  ],
+  
+  "value_propositions": {
+    "speed": "We stand up Control Tower + landing zone fast, so teams deploy safely from day one.",
+    "cost": "Quick FinOps review typically finds immediate right-sizing + storage savings.",
+    "modernization": "We re-platform to EKS/serverless and automate CI/CD to ship faster.",
+    "data_ai": "We unlock S3 + Redshift/EMR with governed pipelines, then layer Bedrock for GenAI.",
+    "security": "Guardrails, IAM least-privilege, and WAF/KMS hardening without slowing dev."
+  },
+  
+  "objection_responses": {
+    "not_interested": "I totally get it - you probably get a ton of these calls. Before I let you go, can I ask - is it that you're completely happy with your current setup, or is it just not a priority right now?",
+    "no_time": "I hear you, sounds like you're swamped. How about I call you back Thursday morning - or is afternoon typically better for you?",
+    "send_email": "I'd be happy to send something over. Just so I don't waste your time with irrelevant stuff - what would be most useful to see? Cost savings examples? Architecture patterns? Case studies?",
+    "already_have_solution": "That's great - most of our clients were using something when we started working together. Just out of curiosity, what are you using now? And how's it working for you?",
+    "no_budget": "I understand - budget's tight everywhere right now. Typically when does your team look at the budget for next year? And what would need to be different for this to make sense then?",
+    "not_decision_maker": "Got it, thanks for being upfront. Who typically handles these kinds of decisions on your team? And would you mind introducing me, or should I reach out directly?",
+    "happy_with_current": "That's awesome - glad it's working well! Mind if I ask what you like most about it? And is there anything you wish was different?",
+    "bad_timing": "No problem at all. When would be a better time to circle back? Next quarter? Or is there a specific project timeline I should keep in mind?"
+  },
+  
+  "call_to_actions": {
+    "qualified_now": "Based on what you've shared about {specific_pain}, I think it makes sense for us to dive deeper. I've got time Thursday at 2 PM for a quick 15-minute screen share where I can show you exactly how we'd solve this. Does that work, or is Friday morning better?",
+    "qualified_future": "Sounds like this won't be a priority until {their_timeline}. How about I send you a one-page overview of how we solve {their_pain}, and then I'll check back in {callback_timeframe}? What's the best email?",
+    "needs_more_info": "I want to make sure I'm not wasting your time. Would it make sense to do a quick 10-minute call next week where you can tell me more about your setup, and I can be more specific about whether we can help?",
+    "refer_to_colleague": "It sounds like {colleague_name} would be the right person for me to talk to about this. Would you mind introducing us, or should I reach out directly? What's their email?",
+    "not_qualified": "I appreciate your time today. Doesn't sound like we're a fit right now, but things change. Can I check back in 6 months? And hey - who in your network do you think might be dealing with {relevant_problem}?",
+    "send_information": "I'll send over a case study showing how we helped {similar_company} with exactly this problem. What's your email? And when you review solutions like this, what's most important to you - the cost savings, the implementation speed, or the technical approach?"
+  },
+  
+  "voicemail_script": "Hi, {agent_name} at {company_name}—AWS Partner. We help teams cut AWS cost and speed up delivery. I'll email a 60-second brief—reply with a good time for a quick call. Thanks!",
+  
+  "qualification_criteria": {
+    "must_have": [
+      "Using or planning to use AWS",
+      "Technical team of 5+ people",
+      "Genuine pain point or upcoming project",
+      "Decision maker or strong influencer"
+    ],
+    "nice_to_have": [
+      "Current AWS spend >$10k/month",
+      "Growth stage or enterprise company",
+      "Timeline within 6 months",
+      "Previous experience with consultants"
+    ],
+    "disqualifiers": [
+      "Company size <10 employees",
+      "No cloud plans in next 12 months",
+      "Just signed multi-year contract with competitor",
+      "Hostile or completely uninterested"
+    ]
+  },
+  
+  "discovery_flow": {
+    "step1_permission": "Use opening line, get permission to continue",
+    "step2_qualification": "Confirm they're the right person and using/considering AWS",
+    "step3_current_state": "Understand what they're using today",
+    "step4_pain_discovery": "Uncover specific challenges they're facing",
+    "step5_impact": "Quantify the impact of their problems",
+    "step6_priority": "Understand urgency and timeline",
+    "step7_solution_fit": "Briefly connect our capabilities to their specific pain",
+    "step8_next_steps": "Schedule follow-up or gracefully exit"
+  },
+  
+  "pain_point_responses": {
+    "high_costs": "I hear this a lot. We typically find 30-40% savings in the first review. Worth exploring?",
+    "slow_deployment": "That's frustrating. We usually get deployment time down by 70% with proper CI/CD. Interested?",
+    "security_concerns": "Critical issue. We implement zero-trust architectures that pass SOC2/HIPAA. Should we talk more?",
+    "scaling_issues": "Growing pains are real. We've helped companies scale 10x without breaking. Want details?",
+    "technical_debt": "Tech debt kills velocity. We modernize incrementally without disrupting operations. Sound useful?",
+    "lack_expertise": "Common challenge. We can either upskill your team or provide ongoing support. Which sounds better?"
+  },
+  
+  "dynamic_inputs": {
+    "industry": "",
+    "company_size": "",
+    "current_stack": "",
+    "primary_pain": "",
+    "timeline": "",
+    "budget_range": "",
+    "decision_maker": "",
+    "prospect_email": "",
+    "prospect_name": "",
+    "prospect_company": "",
+    "prospect_title": "",
+    "callback_window": "",
+    "similar_company": ""  
+  }
+}
